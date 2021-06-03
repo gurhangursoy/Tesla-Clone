@@ -3,6 +3,7 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import React from 'react'
 import MenuIcon from '@material-ui/icons/Menu'
+import CloseIcon from '@material-ui/icons/Menu'
 import styled from "styled-components"
 
 
@@ -24,6 +25,10 @@ function Header() {
             </RightMenu>
 
             <BurgerNav>
+                <CloseWrapper>
+                    <CustomClose/>
+                </CloseWrapper>
+                
                 <li>
                     <a href="#">Existing Inventory</a>
                 </li>
@@ -125,4 +130,12 @@ const BurgerNav = styled.div`
             font-weight: 600;
         }
     }
+`
+
+const CustomClose = styled(CloseIcon)`
+
+`
+const CloseWrapper = styled.div`
+    display:flex;
+    justify-content: flex-end
 `

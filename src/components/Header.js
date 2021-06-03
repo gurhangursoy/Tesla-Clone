@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable react/jsx-no-comment-textnodes */
 import React from 'react'
 import MenuIcon from '@material-ui/icons/Menu'
 import styled from "styled-components"
@@ -6,10 +9,9 @@ import styled from "styled-components"
 function Header() {
     return (
         <Container>
-            <a>
-                <img src="/images/logo.svg" />
-            </a>
+            <a><img src="/images/logo.svg" /></a>
             <Menu>
+                
                 <a href="#"> Model S</a>
                 <a href="#"> Model 3</a>
                 <a href="#"> Model X</a>
@@ -64,7 +66,8 @@ const Container = styled.div`
     padding: 0 20px;
     top:0;
     left:0;
-    right:0
+    right:0;
+    z-index:1
 `
 
 const Menu = styled.div`
@@ -108,4 +111,18 @@ const BurgerNav = styled.div`
     background:white;
     width:300px;
     z-index:100;
+    list-style:none;
+    padding:20px;
+    display:flex;
+    flex-direction: column;
+    text-align:start;
+
+    li {
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(0,0,0, .2);
+
+        a{
+            font-weight: 600;
+        }
+    }
 `
